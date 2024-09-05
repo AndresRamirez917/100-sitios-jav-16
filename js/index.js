@@ -5,15 +5,18 @@ async function getData(){
     //convertir json a array !!!!chimbita
     const arr = products.map(elemento => Object.entries(elemento));
     console.log(arr)
+    
     products.forEach(element => {
+        const indice = randomDescription(1, arr.length);
+        const cosa = indice
         for(i = 0; i < testimonials.length; i++){
             if(element.id == i){
                 const card = document.createRange().createContextualFragment(`
                     
                     <div class="${testimonials[i-1]}">
-                        <p>${arr[randomDescription(1, arr.length)][3][1]}</p>
-                        <h3>${element.title}</h3>
-                        <img src="${arr[randomDescription(1, arr.length)][5][1]}">
+                        <p>${arr[cosa][3][1]}</p>
+                        <h3>${arr[cosa][1][1]}</h3> 
+                        <img src="${arr[cosa][5][1]}">
                     </div>
                     
                     `)
@@ -24,7 +27,9 @@ async function getData(){
 
         function randomDescription(min, max) { // min and max included 
             return Math.floor(Math.random() * (max - min + 1) + min);
+            
           }
+         // console.log(randomDescription(1, arr.length))
     });
 }
 
