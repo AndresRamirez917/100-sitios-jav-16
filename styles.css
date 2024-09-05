@@ -144,6 +144,12 @@ button:hover {
 
 /* testimonial */
 
+#testimonial {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 #testimonial .title {
     margin-bottom: 50px;
 }
@@ -157,11 +163,23 @@ button:hover {
 .testimonial-left {
     float: left;
     width: 50%;
+    text-align: justify;
 }
 
 .testimonial-rigth {
     float: right;
     width: 50%;
+    text-align: justify;
+}
+
+.testimonial-left p {
+    width: 70%;
+  
+}
+
+.testimonial-rigth p {
+    width: 90%;
+  
 }
 
 #testimonial {

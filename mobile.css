@@ -60,6 +60,17 @@
     margin-bottom: 20px;
 }
 
+.testimonial-left p {
+    text-align: justify;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.testimonial-rigth p {
+    text-align: justify;
+}
+
 /* logo-2 */
 #logo-2 img {
     width: 50%;

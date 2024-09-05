@@ -2,13 +2,16 @@ async function getData(){
     const result = await fetch('https://fakestoreapi.com/products/');
     const products = await result.json();
     const testimonials = ["testimonial-left", "testimonial-rigth", ""]
+    //convertir json a array !!!!chimbita
+    const arr = products.map(elemento => Object.entries(elemento));
+    console.log(arr)
     products.forEach(element => {
         for(i = 0; i < testimonials.length; i++){
             if(element.id == i){
                 const card = document.createRange().createContextualFragment(`
                     
                     <div class="${testimonials[i-1]}">
-                        <p>${element.description}</p>
+                        <p>${arr[randomDescription(1, arr.length)][3][1]}</p>
                         <h3>${element.title}</h3>
                     </div>
                     
@@ -18,12 +21,9 @@ async function getData(){
             }
         }
 
-        function randomIntFromInterval(min, max) { // min and max included 
+        function randomDescription(min, max) { // min and max included 
             return Math.floor(Math.random() * (max - min + 1) + min);
           }
-          
-          const rndInt = randomIntFromInterval(1, testimonials.length);
-          console.log(rndInt);
     });
 }
 
