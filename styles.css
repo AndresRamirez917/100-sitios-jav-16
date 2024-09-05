@@ -61,6 +61,13 @@ button:hover {
     border-radius: 10px; 
 }
 
+::placeholder {
+    font-family: "Font Awesome 5 free";
+    font-weight: 600;
+    content: "\f007";
+    text-align: right;
+}
+
 /* navbar */
 .navbar .logo {
     float: left;
