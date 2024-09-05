@@ -13,6 +13,7 @@ async function getData(){
                     <div class="${testimonials[i-1]}">
                         <p>${arr[randomDescription(1, arr.length)][3][1]}</p>
                         <h3>${element.title}</h3>
+                        <img src="${arr[randomDescription(1, arr.length)][5][1]}">
                     </div>
                     
                     `)

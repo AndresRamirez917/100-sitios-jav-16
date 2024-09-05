@@ -177,6 +177,20 @@ button:hover {
   
 }
 
+.testimonial-left img {
+    width: 30%;
+    height: 30vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.testimonial-rigth img {
+    width: 30%;
+    height: 30vh;
+  display: block;
+  margin: 0 auto;
+}
+
 .testimonial-rigth p {
     width: 90%;
   
